@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">  
+    <link rel="stylesheet" type="text/css"   href="style2.css">
+<link  href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">   
+</head>
+<body>
+   <section class="contact">
+   <div class="content">
+   <h2>contact us</h2>
+<p>Bienvenue dans votre restaurant Mr One. Si vous souhaitez réserver une place au restaurant, envoyez un e-mail ou appelez Merci</p>
+</div>
+</div>
+<div class="container">
+<div class="contactInfo">
+<div class="box">
+<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+<div class="text">
+<h3>Address</h3>
+<p>El kiffane, rue mohamed abdellaoui <br> Tlemcen, Algeria </p>
+</div>
+</div>
+<div class="box">
+<div class="icon"><i class="fa fa-phone"></i></div>
+<div class="text">
+<h3>Téléphone</h3>
+<p>0770-13-54-25</p>
+</div>
+</div>
+<div class="box">
+<div class="icon"><i class="fa fa-envelope"></i></div>
+<div class="text">
+<h3>Email</h3>
+<p>meradryad.one<br>@gmail.com</p>
+</div>
+</div>
+</div>
+<div class="contactForm">
+<form method="post">
+<h2>send message</h2>
+<div class="inputBox">
+<input type="name" id="name"  name="name" required="required">
+<span>Full Name</span>
+</div>
+<div class="inputBox">
+<input type="email" id="email" name="email" required="required">
+<span>Email</span>
+</div>
+<div class="inputBox">
+<textarea id="message" required="required"></textarea>
+<span>Type your Message.....</span>
+</div>
+<div class="inputBox">
+<input type="submit" name="btn"  value="send">
+</div>
+
+</form>
+</div>
+</div>
+</section> 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+var btn= document.getElementById('btn');
+btn.addEventListener('click' , function(e){
+e.preventDefault()
+var name =document.getElementById('name').value;
+var email =document.getElementById('email').value;
+var message=document.getElementById('message').value;
+var body= 'name :'+name+'<br/> email:'+email+'<br/> subject' +subject + '<br/> message'+message;
+Email.send({
+    Host : "smtp.gmail.com",
+    Username : "hassaine20148@gmail.com",
+    Password : "hassaine201478901",
+    To : 'hassaine20147@gmail.com',
+    From : email,
+    Body : body,
+}).then(
+  message => alert(message)
+);
+})
+
+
+
+</script>
+</body>
+</html>
